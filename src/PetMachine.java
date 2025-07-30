@@ -23,7 +23,7 @@ public class PetMachine {
             return;
         }
 
-        water += 2;
+        water += 10;
     }
 
     public void addShampoo() {
