@@ -74,6 +74,6 @@ public class Main {
         }
         Pet pet = new Pet(name);
         petMachine.setPet(pet);
-        System.out.printf("O pet %s foi colocado na máquina%n",pet.getName());
+        System.out.printf("Tentando colocar pet %s na máquina%n",pet.getName());
     }
 }
