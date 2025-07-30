@@ -4,6 +4,7 @@ public class Main {
     private final static Scanner scanner = new Scanner(System.in);
     private final static PetMachine petMachine = new PetMachine(); 
     public static void main(String[] args) {
+        scanner.useDelimiter("\\n");
         int option = -1;
 
         do {
@@ -69,7 +70,7 @@ public class Main {
         String name = "";
         while (name == null || name.isEmpty()) {
             System.out.println("Informe o nome do pet");
-            name = scanner.nextLine();
+            name = scanner.next();
         }
         Pet pet = new Pet(name);
         petMachine.setPet(pet);
