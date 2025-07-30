@@ -12,6 +12,7 @@ public class PetMachine {
 
         this.water -= 10;
         this.shampoo -= 2;
+        this.clean = false;
         pet.setClean(true);
         System.out.printf("O pet %s está limpo%n",pet.getName());
     }
@@ -61,7 +62,6 @@ public class PetMachine {
     }
 
     public void removePet() {
-        this.clean = this.pet.isClean();
         System.out.printf("O pet %s foi retirado da máquina%n",this.pet.getName());
         this.pet = null;
     }
