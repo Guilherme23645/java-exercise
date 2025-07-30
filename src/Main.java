@@ -19,21 +19,23 @@ public class Main {
             System.out.println("9. Limpar a máquina");
             System.out.println("0. Sair");
             option = scanner.nextInt();
+
+            switch (option) {
+                case 1 -> petMachine.takeShower();
+                case 2 -> setWater();
+                case 3 -> setShampoo();
+                case 4 -> verifyWater();
+                case 5 -> verifyShampoo();
+                case 6 -> verifyPet(); 
+                case 7 -> setPetInPetMachine(); 
+                case 8 -> petMachine.removePet();
+                case 9 -> petMachine.wash();
+                case 0 -> System.exit(0);
+                default -> System.out.println("Opção inválida");
+            }
+
         } while (option != 0);
 
-        switch (option) {
-            case 1 -> petMachine.takeShower();
-            case 2 -> setWater();
-            case 3 -> setShampoo();
-            case 4 -> verifyWater();
-            case 5 -> verifyShampoo();
-            case 6 -> verifyPet(); 
-            case 7 -> setPetInPetMachine(); 
-            case 8 -> petMachine.removePet();
-            case 9 -> petMachine.wash();
-            case 0 -> System.exit(0);
-            default -> System.out.println("Opção inválida");
-        }
 
         scanner.close();
     }
