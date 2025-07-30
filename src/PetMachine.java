@@ -62,7 +62,7 @@ public class PetMachine {
 
     public void removePet() {
         this.clean = this.pet.isClean();
-        System.out.printf("O pet %s está limpo%n",this.pet.getName());
+        System.out.printf("O pet %s foi retirado da máquina%n",this.pet.getName());
         this.pet = null;
     }
 
