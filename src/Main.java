@@ -69,7 +69,7 @@ public class Main {
         String name = "";
         while (name == null || name.isEmpty()) {
             System.out.println("Informe o nome do pet");
-            name = scanner.next();
+            name = scanner.nextLine();
         }
         Pet pet = new Pet(name);
         petMachine.setPet(pet);
