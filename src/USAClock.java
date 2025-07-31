@@ -35,7 +35,7 @@ public non-sealed class USAClock extends Clock {
                 this.period = usaClock.getPeriod();
             }
 
-            case BRLClock brlClock -> setHour(this.hour);
+            case BRLClock brlClock -> setHour(brlClock.getHour());
         }
         return this;
     }

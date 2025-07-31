@@ -3,7 +3,7 @@ public class Main {
         Clock brlClock = new BRLClock();
         brlClock.setSecond(0);
         brlClock.setMinute(0);
-        brlClock.setHour(25);
+        brlClock.setHour(13);
 
         System.out.println(brlClock.getTime());
 
