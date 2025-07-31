@@ -1,4 +1,4 @@
-public abstract class Clock {
+public sealed abstract class Clock permits BRLClock, USAClock{
     protected int hour;
     protected int minute;
     protected int second;

@@ -1,4 +1,4 @@
-public class USAClock extends Clock {
+public non-sealed class USAClock extends Clock {
     private String period;
 
     public String getPeriod() {
