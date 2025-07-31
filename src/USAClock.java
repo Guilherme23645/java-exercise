@@ -26,7 +26,6 @@ public non-sealed class USAClock extends Clock {
         }
     }
 
-    @Override
     public Clock convert(final Clock clock) {
         this.second = clock.getSecond();
         this.minute = clock.getMinute();
@@ -36,8 +35,13 @@ public non-sealed class USAClock extends Clock {
                 this.period = usaClock.getPeriod();
             }
 
-            case BRLClock brlClock -> this.hour = brlClock.getHour();
+            case BRLClock brlClock -> setHour(this.hour);
         }
         return this;
+    }
+
+    @Override
+    public String getTime() {
+        return super.getTime() + " " + this.period;
     }
 }
