@@ -1,4 +1,4 @@
-public class Clock {
+public abstract class Clock {
     private int hour;
     private int minute;
     private int second;
@@ -8,7 +8,7 @@ public class Clock {
     }
 
     public void setHour(int hour) {
-        this.hour = hour;
+        this.hour = hour > 24 ? 24 : hour ;
     }
 
     public int getMinute() {
@@ -16,7 +16,7 @@ public class Clock {
     }
 
     public void setMinute(int minute) {
-        this.minute = minute;
+        this.minute = minute > 60 ? 60 : minute;
     }
 
     public int getSecond() {
@@ -24,6 +24,8 @@ public class Clock {
     }
 
     public void setSecond(int second) {
-        this.second = second;
+        this.second = second > 60 ? 60 : second;
     }
+
+    public abstract Clock convert(Clock clock);
 }
