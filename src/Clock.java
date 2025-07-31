@@ -27,9 +27,12 @@ public sealed abstract class Clock permits BRLClock, USAClock{
         this.second = second > 60 ? 60 : second;
     }
 
+    private String format(int value) {
+        return value < 10 ? "0"+value : Integer.toString(value) ;
+    }
+
     public String getTime() {
-        var hourToPrint = hour < 9 ? "0" + hour : hour;
-        return hourToPrint+":"+minute+":"+second;
+        return format(hour)+":"+format(minute)+":"+format(second);
     }
 
     public abstract Clock convert(Clock clock);
