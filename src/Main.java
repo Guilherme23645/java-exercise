@@ -27,7 +27,7 @@ public class Main {
         System.out.println("Informe o lado do quadrado:");
         double side = scanner.nextDouble();
         Shape square = new Square(side);
-        System.out.printf("Área: %s%n",square.getArea());
+        System.out.printf("Área: %.2f%n",square.getArea());
     }
 
     public static void rectangleArea() {
@@ -36,13 +36,13 @@ public class Main {
         System.out.println("Informe a altura do retângulo:");
         double height = scanner.nextDouble();
         Shape rectangle = new Rectangle(width, height);
-        System.out.printf("Área: %s%n",rectangle.getArea());
+        System.out.printf("Área: %.2f%n",rectangle.getArea());
     }
 
     public static void circleArea() {
-        System.out.println("Informe o tamanho do lado do círculo:");
+        System.out.println("Informe o lado do círculo:");
         double radius = scanner.nextDouble();
         Shape circle = new Circle(radius);
-        System.out.printf("Área: %s%n",circle.getArea());
+        System.out.printf("Área: %.2f%n",circle.getArea());
     }
 }
