@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Main {
     private final static Scanner scanner = new Scanner(System.in);
     public static void main(String[] args) {
-        int choice;
+        int choice = -1;
         do {
             System.out.println("Escolha a forma geométrica para calcular a área");
             System.out.println("1. Quadrado");
@@ -17,9 +17,10 @@ public class Main {
                 case 1 -> squareArea();
                 case 2 -> rectangleArea();
                 case 3 -> circleArea();
+                case 4 -> System.exit(0);
+                default -> System.out.println("Opção inválida");
             }
-        } while (choice != 0);
-        scanner.close();
+        } while (choice != 4);
     }
 
     public static void squareArea() {
